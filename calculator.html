@@ -1,0 +1,155 @@
+<html>
+<head>
+	<style>
+		body {
+		  background-color: white;
+		  font-family: cursive;
+		}
+		
+		.glow {
+		  font-size: 13px;
+		  color: #fff;
+		  text-align: center;
+		  animation: glow 1s ease-in-out infinite alternate;
+		}
+		
+		@-webkit-keyframes glow {
+		  from {
+			text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #e60073, 0 0 4px #e60073, 0 0 5px #e60073, 0 0 6px #e60073, 0 0 7px #e60073;
+		  }
+		  
+		  to {
+			text-shadow: 0 0 2px #fff, 0 0 3px #ff4da6, 0 0 4px #ff4da6, 0 0 5px #ff4da6, 0 0 6px #ff4da6, 0 0 7px #ff4da6, 0 0 8px #ff4da6;
+		  }
+		}
+		</style>
+
+	<script>
+        var _____ = 0; //(E)
+
+		//function that add a character
+		function onPress(key)
+		{
+			/* //(H)
+			if (document.getElementById("result")._____ == _____) { 
+				_______;
+			}
+			*/
+			document.getElementById("result").value += key
+		}
+
+        function removeChar()
+		{
+            //write a code segment that remove the last character from the result text box
+            const val = document.getElementById("result").value;
+            var newVal = __________ //(C)
+            document.getElementById("result").value = newVal;
+		}
+		
+		//function that evaluates the digit and return result
+		function solve()
+		{
+			let x = document.getElementById("result").value
+			let y = eval(x)
+			document.getElementById("result").value = __________//(B)
+		}
+		
+		//function that clear the display
+		function clearResult()
+		{
+			document.getElementById("result").value = ________//(D)
+		}
+
+        function onMemoryAdd()
+		{
+            memory += eval(document.getElementById("result").value);
+		}
+
+        function onMemorySubstract()
+		{
+            ________//(F)
+		}
+
+        function onMemoryRecall()
+		{
+            document.getElementById("result").value = memory;
+		}
+
+        function onMemoryClear()
+		{
+            ________//(G)
+		}
+        
+	</script>
+	<!-- for styling -->
+	<style>
+		.title{
+		margin-bottom: 10px;
+		text-align:center;
+		width: 240px;
+		color:blue;
+		border: solid black 2px;
+		}
+
+		input[type="button"]
+		{
+		background-color:silver;
+		color: black;
+		border: solid black 2px;
+		width:100%
+		}
+
+		input[type="text"]
+		{
+		background-color:white;
+		border: solid black 2px;
+		width:100%
+		}
+	</style>
+</head>
+<!-- create table -->
+<body>
+	<div class = title >Calculator</div>
+	<table border="1"> 
+		<tr>
+			<td colspan="3"><input type="text" id="result"/></td>
+			<!-- clearResult() function will call clearResult to clear all value -->
+			<td><input type="button" value="c" onclick="clearResult()"/> </td>
+
+            <!-- removeChar() function will remove the last character from the result -->
+            <td><input type="button" value="<<" onclick="removeChar()"/> </td>
+		</tr>
+		<tr>
+			<!-- create button and assign value to each button -->
+			<!-- onPress("1") will call function onPress to add a key -->
+			<td><input type="button" value="1" onclick="onPress('1')"/> </td>
+			<td><input type="button" value="2" onclick="onPress('2')"/> </td>
+			<td><input type="button" value="3" onclick="onPress('3')"/> </td>
+			<td><input type="button" value="/" onclick="onPress('/')"/> </td>
+            <td><input type="button" value="M+" onclick="onMemoryAdd()"/> </td>
+		</tr>
+		<tr>
+			<td><input type="button" value="4" onclick="onPress('4')"/> </td>
+			<td><input type="button" /> </td> <!--(A)-->
+			<td><input type="button" value="6" onclick="onPress('6')"/> </td>
+			<td><input type="button" value="-" onclick="onPress('-')"/> </td>
+            <td><input type="button" value="M-" onclick="onMemorySubstract('')"/> </td>
+		</tr>
+		<tr>
+			<td><input type="button" value="7" onclick="onPress('7')"/> </td>
+			<td><input type="button" value="8" onclick="onPress('8')"/> </td>
+			<td><input type="button" value="9" onclick="onPress('9')"/> </td>
+			<td><input type="button" value="+" onclick="onPress('+')"/> </td>
+            <td><input type="button" value="MR" onclick="onMemoryRecall()"/> </td>
+		</tr>
+		<tr>
+			<td><input type="button" value="." onclick="onPress('.')"/> </td>
+			<td><input type="button" value="0" onclick="onPress('0')"/> </td>
+			<!-- solve function call function solve to evaluate value -->
+			<td><input type="button" value="=" onclick="solve()"/> </td>
+			<td><input type="button" value="*" onclick="onPress('*')"/> </td>
+            <td><input type="button" value="MC" onclick="_______"/> </td> <!--(G)-->
+		</tr>
+	</table>
+</body>
+</html>
