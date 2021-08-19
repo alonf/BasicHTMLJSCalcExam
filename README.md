@@ -14,6 +14,6 @@ In this exercise you will complete some missing part of a simple calculator HTML
 10. Try to calculate the expression: 10/0= you should get Infinity. Now press another number key - the key is added to the end of the Infinity text. Fix it by checking on any key press if the current value is equal to "Infinity" and if so clear the result text.
 
 The final result should looks like this:
-![final result] /Images/Final.png)
+![final result] https://github.com/alonf/BasicHTMLJSCalcExam/blob/main/Images/Final.png?raw=true)
 
 Submit the result Calculator.html file to info@zion-net.co.il 
