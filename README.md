@@ -11,7 +11,7 @@ In this exercise you will complete some missing part of a simple calculator HTML
 7. Implement the missing part for the 'M-' key. (F)
 8. Fix the memory clear functionality (G)
 9. Make the result text box style to "glow"
-10. Try to calculate the expression: 10/0= you should get Infinity. Now press another number key - the key is added to the end of the Infinity text. Fix it by checking on any key press if the current value is equal to "Infinity" and if so clear the result text.
+10. Try to calculate the expression: 10/0= you should get Infinity. Now press another number key - the key is added to the end of the Infinity text. Fix it by checking on any key press if the current value is equal to "Infinity" and if so clear the result text. (H)
 
 The final result should looks like this:
 
